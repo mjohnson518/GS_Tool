@@ -17,7 +17,7 @@ function App() {
        <Navbar expand="lg" variant="dark" bg="light" sticky="top" className="NavBar">
         <Nav className="flex-grow-1">
           <Link to="/" className="hamburger">
-           <FontAwesomeIcon color="black" icon={faBars} className="hamburger" />
+           <FontAwesomeIcon color="black" icon={faBars}/>
           </Link> 
         </Nav>
       </Navbar>

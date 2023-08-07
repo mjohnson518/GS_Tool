@@ -160,7 +160,8 @@ const calculateGreenScore = () => {
       <h1>Calculate Your Green Score</h1>
 
     <div className='steps'>
-    <p onClick={() => toggleCard(1)}>1. <b>SP Total Scope 2 Emissions</b>:<span className='button'> Click for details...</span></p>
+    <p>1. <b>SP Total Scope 2 Emissions</b></p>
+    <p><span className='button' onClick={() => toggleCard(1)}> Click for details...</span></p>
         {expandedCard === 1 && (
          <>
       <p>The total emissions of an SP are calculated by subtracting the renewable energy consumption from the total electricity consumption and then multiplying the result by a grid emissions factor. The result represents the non-renewable energy-related emissions of the SP​. This is the “slice of the global emissions pie” owned by this SP.</p>
@@ -175,7 +176,8 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-    <p onClick={() => toggleCard(2)}>2. <b>Emissions Intensity</b>:<span className='button'><b> Details...</b></span></p>
+    <p>2. <b>Emissions Intensity</b></p>
+    <p><span className='button' onClick={() => toggleCard(2)}><b> Details...</b></span></p>
         {expandedCard === 2 && (
          <>
       <p>The emissions intensity is determined by dividing the Scope 2 emissions (calculated in step 1) by the data storage capacity of the SP. This provides a measure of the emissions produced per unit of data stored, allowing for a comparison of the emissions efficiency between different SPs​.</p>
@@ -216,10 +218,11 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-    <p onClick={() => toggleCard(5)}>5. <b>Emissions Score = Normalized Emissions Intensity</b><span className='button'> Details...</span></p>
+    <p onClick={() => toggleCard(5)}>5. <b>Emissions Score</b></p>
+    <p><span className='button'> Details...</span></p>
         {expandedCard === 5 && (
          <>
-        <p> This calculation normalizes the emissions intensity of an individual SP by subtracting the SP's emissions intensity from the benchmark emissions intensity and then dividing the result by the benchmark emissions intensity. This provides a measure of how an individual SP's emissions efficiency compares to the network average​.</p>
+        <p> The Emissions Score (Normalized Emissions Intensity) calculation normalizes the emissions intensity of an individual SP by subtracting the SP's emissions intensity from the benchmark emissions intensity and then dividing the result by the benchmark emissions intensity. This provides a measure of how an individual SP's emissions efficiency compares to the network average​.</p>
         <p>Formula: Normalized Emissions Intensity = ((Benchmark Emissions Intensity - SP's Emissions Intensity) / Benchmark Emissions Intensity)</p>
         <input className='box' name="spEmissionsIntensity" onChange={handleInputChange} placeholder={formatNumber(emissionsIntensity)} />
         <button onClick={calculateEmissionsScore}>Calculate</button>
@@ -270,7 +273,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-        <p onClick={() => toggleCard(9)}>9. <b>Benchmark Marginal Network Emissions Intensity</b><span className='button'> Details...</span></p>
+        <p onClick={() => toggleCard(9)}>9. <b>Network Marginal Emissions Intensity</b><span className='button'> Details...</span></p>
         {expandedCard === 9 && (
          <>
         <p> Determine the marginal emissions intensity for the network by dividing the total network marginal emissions by the total network data storage capacity. This provides a measure of the marginal emissions produced per unit of data stored across the entire network​.</p>
@@ -284,10 +287,10 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-        <p onClick={() => toggleCard(10)}>10. <b>Location Score = Normalized Marginal Emissions Intensity</b><span className='button'> Details...</span></p>
+        <p onClick={() => toggleCard(10)}>10. <b>Location Score</b><span className='button'> Details...</span></p>
         {expandedCard === 10 && (
          <>
-        <p> This calculation normalizes the marginal emissions intensity of an individual SP by subtracting the SP's marginal emissions intensity from the benchmark marginal emissions intensity and then dividing the result by the benchmark marginal emissions intensity. This provides a measure of how an individual SP's marginal emissions efficiency compares to the network average​.</p>
+        <p> The Location Score (Normalized Marginal Emissions Intensity) calculation normalizes the marginal emissions intensity of an individual SP by subtracting the SP's marginal emissions intensity from the benchmark marginal emissions intensity and then dividing the result by the benchmark marginal emissions intensity. This provides a measure of how an individual SP's marginal emissions efficiency compares to the network average​.</p>
         <p>Formula: 1 - ((Benchmark Marginal Network Emissions Intensity - SP Marginal Network Emissions Intensity) / (Benchmark Marginal Network Emissions Intensity))</p>
         <button onClick={calculateLocationScore}>Calculate</button>
         {locationScore !== null && <div>Your Location Score is: {formatNumber(locationScore)}</div>}

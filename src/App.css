@@ -21,18 +21,19 @@
   position: sticky;
   height: 1.5rem;
   max-height: 2rem;
-  top: 0%;
+  margin: 0rem auto;
+  top: 5%;
   z-index: 1;
 }
 
 .hamburger {
-  margin: 0.25rem 0rem 2rem 0.25rem;
+  margin: 2rem 0.25rem 2rem 0.25rem;
   justify-content: right;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
   .hamburger {
-    margin: -4px 25rem 3px 3px;
+    margin: 2rem 0.25rem 2rem 0.25rem;
   }
 }
 
@@ -51,12 +52,11 @@
 
 .App-text {
   
-  min-height: 50vh;
+  min-height: 20vh;
   max-width: 70%;
   display: flex;
   flex-direction: column;
-  margin: 3rem auto;
-  margin-bottom: 5rem;
+  margin: 1rem auto;
   align-items: center;
   justify-content: center;
   font-size: calc(6px + 2vmin);
@@ -153,14 +153,13 @@ overflow: hidden;
 
 .box {
   width: 90%;
-  
-  display: block; /* block ensures the width is applied fully */
-  /* in case content tries to exceed the box */
-  text-overflow: ellipsis; /* this will add '...' if content overflows */
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
   padding: 8px 12px;
   box-sizing: border-box;
-  font-size: 14px; /* adjust as necessary */
+  font-size: 14px; 
   border: 1px solid #ccc;
   border-radius: 4px;
   margin: 1rem auto;
