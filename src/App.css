@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: black;
 }
 
 .App-logo {
@@ -13,19 +14,61 @@
   }
 }
 
+.NavBar {
+  background: linear-gradient(0.25turn, #4CF087, #34B4C1, #1B77F8);
+  align-items: right;
+  display: flex;
+  position: sticky;
+  height: 1.5rem;
+  max-height: 2rem;
+  top: 0%;
+  z-index: 1;
+}
+
+.hamburger {
+  margin: 0.25rem 0rem 2rem 0.25rem;
+  justify-content: right;
+}
+
+@media screen and (max-width: 1000px) {
+  .hamburger {
+    margin: -4px 25rem 3px 3px;
+  }
+}
+
 .App-header {
-  background-color: #282c34;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: white;
+  font-family: monospace;
+  background-color: black;
+}
+
+.App-text {
+  
+  min-height: 50vh;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+  margin-bottom: 5rem;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(6px + 2vmin);
+  color: white;
+  font-family: monospace;
+  background-color: black;
 }
 
 .App-link {
-  color: #61dafb;
+  color: rgb(239,196,15);
+  cursor: pointer;
+  margin-right: 2px;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +78,90 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.blinking-cursor {
+  font-family: monospace;
+  position: relative;
+  animation: blinking-cursor 0.5s step-end infinite alternate;
+}
+
+@keyframes blinking-cursor {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.default {
+  font-size: calc(14px + 2vmin);
+  color: white;
+  font-family: monospace;
+}
+
+.info {
+  width: 75%;
+}
+
+.profile-photo {
+  background: center / contain no-repeat url('./assets/FG_logo.ico');
+  border-radius: 50%;
+  height: 20rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: 20rem;
+  background-color: transparent;
+}
+
+.button {
+  background: linear-gradient(0.25turn, #4CF087, #34B4C1, #1B77F8);
+  background-color: #686869;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(2px + 2vmin);
+  color: white;
+  border: 1px solid #1B77F8;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-weight: bolder;
+  border-radius: 10px;
+}
+
+.button:hover {
+  color: white;
+  box-shadow: -0.25em 0.25em .15em #686869;
+  
+}
+
+.steps {
+width: 90%;
+max-width: 1250px;
+border: 1px solid #565656;
+margin: 2rem auto;
+padding: 2rem;
+overflow: hidden;
+
+}
+
+.steps > p {
+  cursor: pointer;
+}
+
+.box {
+  width: 90%;
+  
+  display: block; /* block ensures the width is applied fully */
+  /* in case content tries to exceed the box */
+  text-overflow: ellipsis; /* this will add '...' if content overflows */
+  white-space: nowrap;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  font-size: 14px; /* adjust as necessary */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 1rem auto;
 }
