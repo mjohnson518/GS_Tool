@@ -229,7 +229,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-    <p onClick={() => toggleCard(6)}>6. <b>SP Marginal Emissions Score: </b><span className='details'><u>Details...</u></span></p>
+    <p onClick={() => toggleCard(6)}>6. <b>SP Marginal Emissions: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 6 && (
          <>
         <p> This is the “effect of the SP on local power grid emissions”; a measurement of how having a load at that grid location affects how the power grid functions.</p>
