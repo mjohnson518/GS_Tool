@@ -160,8 +160,7 @@ const calculateGreenScore = () => {
       <h1>Calculate Your Green Score</h1>
 
     <div className='steps'>
-    <p>1. <b>SP Total Scope 2 Emissions</b></p>
-    <p><span className='button' onClick={() => toggleCard(1)}> Click for details...</span></p>
+    <p>1. <b>SP Total Scope 2 Emissions: </b><span className='details' onClick={() => toggleCard(1)}><u>Click for details...</u></span></p>
         {expandedCard === 1 && (
          <>
       <p>The total emissions of an SP are calculated by subtracting the renewable energy consumption from the total electricity consumption and then multiplying the result by a grid emissions factor. The result represents the non-renewable energy-related emissions of the SP​. This is the “slice of the global emissions pie” owned by this SP.</p>
@@ -176,8 +175,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-    <p>2. <b>Emissions Intensity</b></p>
-    <p><span className='button' onClick={() => toggleCard(2)}><b> Details...</b></span></p>
+    <p>2. <b>Emissions Intensity: </b><span className='details' onClick={() => toggleCard(2)}><u>Details...</u></span></p>
         {expandedCard === 2 && (
          <>
       <p>The emissions intensity is determined by dividing the Scope 2 emissions (calculated in step 1) by the data storage capacity of the SP. This provides a measure of the emissions produced per unit of data stored, allowing for a comparison of the emissions efficiency between different SPs​.</p>
@@ -190,7 +188,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-    <p onClick={() => toggleCard(3)}>3. <b>Network Scope 2 Emissions</b>:<span className='button'><b> Details...</b></span></p>
+    <p onClick={() => toggleCard(3)}>3. <b>Network Scope 2 Emissions: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 3 && (
          <>
         <p>The total emissions across the entire network are determined by subtracting the total network renewable energy consumption from the total network electricity consumption and then multiplying the result by an average grid emissions factor. This provides a measure of the total non-renewable energy-related emissions across the network​. This is the “slice of the global emissions pie” owned by the Filecoin network.</p>
@@ -205,7 +203,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-    <p onClick={() => toggleCard(4)}>4. <b>Benchmark Network Emissions Intensity</b>:<span className='button'><b> Details...</b></span></p>
+    <p onClick={() => toggleCard(4)}>4. <b>Benchmark Network Emissions Intensity: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 4 && (
          <>
         <p>The emissions intensity for the network as a whole is determined by dividing the total network Scope 2 emissions (calculated in step 3) by the total network data storage capacity. This provides a measure of the emissions produced per unit of data stored across the entire network, serving as a benchmark for comparing individual SPs​.</p>
@@ -218,8 +216,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-    <p onClick={() => toggleCard(5)}>5. <b>Emissions Score</b></p>
-    <p><span className='button'> Details...</span></p>
+    <p onClick={() => toggleCard(5)}>5. <b>Emissions Score: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 5 && (
          <>
         <p> The Emissions Score (Normalized Emissions Intensity) calculation normalizes the emissions intensity of an individual SP by subtracting the SP's emissions intensity from the benchmark emissions intensity and then dividing the result by the benchmark emissions intensity. This provides a measure of how an individual SP's emissions efficiency compares to the network average​.</p>
@@ -232,7 +229,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-    <p onClick={() => toggleCard(6)}>6. <b>SP Marginal Emissions Score</b><span className='button'> Details...</span></p>
+    <p onClick={() => toggleCard(6)}>6. <b>SP Marginal Emissions Score: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 6 && (
          <>
         <p> This is the “effect of the SP on local power grid emissions”; a measurement of how having a load at that grid location affects how the power grid functions.</p>
@@ -246,7 +243,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-    <p onClick={() => toggleCard(7)}>7. <b>SP Marginal Emissions Intensity</b><span className='button'> Details...</span></p>
+    <p onClick={() => toggleCard(7)}>7. <b>SP Marginal Emissions Intensity: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 7 && (
          <>
         <p> The marginal emissions intensity is determined by dividing the SPs Marginal Emissions (calculated in step 6) by the data storage capacity of the SP. This provides a measure of the marginal emissions produced per unit of data stored, allowing for a comparison of the marginal emissions efficiency between different SPs​.</p>
@@ -259,7 +256,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-    <p onClick={() => toggleCard(8)}>8. <b>Network Marginal Emissions</b><span className='button'> Details...</span></p>
+    <p onClick={() => toggleCard(8)}>8. <b>Network Marginal Emissions: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 8 && (
          <>
         <p> The total marginal emissions across the entire network are determined by subtracting the total network renewable energy production from the total network electricity consumption and then multiplying the result by a global average marginal emissions factor. This provides a measure of the total non-renewable energy-related marginal emissions across the network​.</p>
@@ -273,7 +270,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-        <p onClick={() => toggleCard(9)}>9. <b>Network Marginal Emissions Intensity</b><span className='button'> Details...</span></p>
+        <p onClick={() => toggleCard(9)}>9. <b>Network Marginal Emissions Intensity: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 9 && (
          <>
         <p> Determine the marginal emissions intensity for the network by dividing the total network marginal emissions by the total network data storage capacity. This provides a measure of the marginal emissions produced per unit of data stored across the entire network​.</p>
@@ -287,7 +284,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-        <p onClick={() => toggleCard(10)}>10. <b>Location Score</b><span className='button'> Details...</span></p>
+        <p onClick={() => toggleCard(10)}>10. <b>Location Score: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 10 && (
          <>
         <p> The Location Score (Normalized Marginal Emissions Intensity) calculation normalizes the marginal emissions intensity of an individual SP by subtracting the SP's marginal emissions intensity from the benchmark marginal emissions intensity and then dividing the result by the benchmark marginal emissions intensity. This provides a measure of how an individual SP's marginal emissions efficiency compares to the network average​.</p>
@@ -300,11 +297,11 @@ const calculateGreenScore = () => {
 
 
     <div className='steps'>
-        <p onClick={() => toggleCard(11)}>11. <b>Confidence Score</b><span className='button'> Details...</span></p>
+        <p onClick={() => toggleCard(11)}>11. <b>Confidence Score: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 11 && (
          <>
         <p> This score is assigned based on certain qualifying criteria from the SP Confidence Scoring Matrix. These criteria likely pertain to the reliability or quality of the SP's data or performance​.</p>
-        <p>Formula: An overview of the Confidence Scoring Matrix is provided below: Green Scores Methodology</p>
+        <p>Formula: An overview of the Confidence Scoring Matrix is provided below: <a className='App-link' href="https://docs.google.com/document/d/1UIBy_GzxI6dqRvgbYnaI93NRVZr20ZMLWxTaNg0salw/edit#bookmark=id.n3y8ocbzmy7v"><b>Green Scores Methodology</b></a></p>
         <input className='box' name="confidenceScore" onChange={handleInputChange} placeholder="Enter Confidence Score..." />
         <button onClick={calculateConfidenceScore}>Calculate</button>
         {confidenceScore !== null && <div>Your Confidence Score is: {formatNumber(confidenceScore)}</div>}
@@ -313,7 +310,7 @@ const calculateGreenScore = () => {
     </div>
 
     <div className='steps'>
-        <p onClick={() => toggleCard(12)}>12. <b>Green Score</b><span className='button'> Details...</span></p>
+        <p onClick={() => toggleCard(12)}>12. <b>Green Score: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 12 && (
          <>
         <p> The Green Score is calculated by multiplying the Confidence Score by the “slice of the global emissions pie” (Emissions Score), and the measure of how an individual SP's marginal emissions efficiency compares to the network average​ (Location Score), and then multiplying the result by 100. This results in a score ranging from 0 to 100, and provides a measure of the SP's environmental performance, with higher scores indicating better performance​.</p>
