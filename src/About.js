@@ -12,7 +12,7 @@ function App() {
         <p className="App-text">
         A higher Green Score indicates more efficient energy use and less environmental impact, making it an essential tool for SPs to demonstrate their contributions towards achieving sustainability goals.  
         </p>
-        <Link to="/GS">
+            <Link to="/GS">
               <button className="button">Get Started</button>
             </Link>
       </header>

@@ -8,11 +8,16 @@ function Main() {
     <div className="profile-photo"></div>
     
       <p className="default">
-        Coming Soon...<span className="blinking-cursor">|</span>
+        Work-in-Progress<span className="blinking-cursor">|</span>
       </p>
       <div className="main_text">
             <Link to="/About">
               <button className="button">About</button>
+            </Link>
+     </div>
+     <div className="main_text">
+            <Link to="/GS">
+              <button className="button">Calculator</button>
             </Link>
       </div>
     </header>
