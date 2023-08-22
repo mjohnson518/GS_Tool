@@ -15,11 +15,7 @@ function Main() {
               <button className="button">About</button>
             </Link>
      </div>
-     <div className="main_text">
-            <Link to="/GS">
-              <button className="button">Calculator</button>
-            </Link>
-      </div>
+    
     </header>
   );
 }
