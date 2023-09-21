@@ -301,7 +301,7 @@ const calculateGreenScore = () => {
         <p onClick={() => toggleCard(11)}>11. <b>Confidence Score: </b><span className='details'><u>Details...</u></span></p>
         {expandedCard === 11 && (
          <>
-        <p> This score is assigned based on certain qualifying criteria from the SP Confidence Scoring Matrix. These criteria likely pertain to the reliability or quality of the SP's data or performance​.</p>
+        <p> This score is assigned based on certain qualifying criteria from the SP Confidence Scoring Matrix. These criteria pertain to the reliability and quality of the SP's energy and environmental data​.</p>
         <p>Formula: An overview of the Confidence Scoring Matrix is provided below: <a className='App-link' href="https://docs.google.com/spreadsheets/d/1AMexKW-BHv02qwDXh3314ID-7Jt2uVXxFHjD6-vuuD0"><b>Green Scores Methodology</b></a></p>
         <input className='box' name="confidenceScore" onChange={handleInputChange} placeholder="Enter Confidence Score..." />
         <button onClick={calculateConfidenceScore}>Calculate</button>
